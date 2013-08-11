@@ -90,5 +90,7 @@ log.fit<-
 # The GLM models do not perform well here as it is very costly due to all of the covariates and factors therein. 
 # Advised to use the Caret package to perform programmatic feature selection/engineering, running into limitations for analysis on 1 box.
 # The err.rates are skewed by a handful of covariates predominately factors within the datam$Job Class (eg. student)
-# Nevertheless, this model reveals that the best OR is glm 4; however, this model should be reworked in Caret for better accuracy and precision.
-   
+# Nevertheless, this model reveals that the highest OR with minimal skewed covariates (and subsequent factors) is glm 6.
+
+summary(glm6)
+summary(err.rates6)
